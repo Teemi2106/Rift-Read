@@ -16,15 +16,20 @@ const Dashboard = ({ user }) => {
     const fetchBooksByPreferences = async () => {
       if (!user || !user.preferences || user.preferences.length === 0) {
         setLoading(false);
+        console.log("No user preferences found.");
         return;
       }
 
-      const preferencesQuery = user.preferences
-        .map((preference) => `subject:${preference}`)
-        .join("+");
+      // Select a random preference from the array
+      const randomPreference =
+        user.preferences[Math.floor(Math.random() * user.preferences.length)];
+
+      const preferencesQuery = `${randomPreference}`;
 
       const apiKey = "AIzaSyAZsjB-iFtJ_cVJD06NnLyXE1pUEKvDFyQ"; // Replace with your actual API key
       const url = `https://www.googleapis.com/books/v1/volumes?q=${preferencesQuery}&orderBy=newest&maxResults=40&key=${apiKey}`;
+
+      console.log("Fetching books with URL:", url);
 
       try {
         const response = await fetch(url);
@@ -33,6 +38,10 @@ const Dashboard = ({ user }) => {
         }
         const data = await response.json();
         const books = data.items || [];
+
+        if (books.length === 0) {
+          console.log("No books found based on preferences.");
+        }
 
         // Shuffle the books array to randomize it
         for (let i = books.length - 1; i > 0; i--) {
