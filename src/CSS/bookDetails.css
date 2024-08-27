@@ -1,0 +1,135 @@
+/* bookDetails.css */
+.book-details {
+  font-family: "Georgia", serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0e6d6; /* Light beige background */
+  color: #3e2a1f; /* Dark brown text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-details h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #3e2a1f;
+}
+
+.book-details img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.book-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.book-details strong {
+  color: #3e2a1f; /* Dark brown for labels */
+}
+
+.book-details a {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #3e2a1f; /* Dark brown background */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.book-details a:hover {
+  background-color: #5a4a3a; /* Slightly lighter dark brown */
+}
+
+/* bookDetails.css */
+
+.book-details {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.read-more-link,
+.read-preview-link {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.read-more-link:hover,
+.read-preview-link:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the loading spinner */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+  background-color: #f0f0f0; /* Light background to make spinner stand out */
+}
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 8px solid #3498db; /* Color of the spinner */
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling for book details */
+.book-details {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.book-image {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.read-preview-link {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #3498db; /* Button color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.read-preview-link:hover {
+  background-color: #2980b9; /* Button hover color */
+}

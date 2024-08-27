@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import Dashboard from "./Pages/Dashboard";
+import SignIn from "./Pages/Signin";
+import { useAuth } from "./useAuth";
+import Preferences from "./Components/Preferences";
+import BookDetails from "./Pages/BookDetails";
 
 function App() {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      {!user ? (
+        <>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/signin" element={<SignIn />} />
+        </>
+      ) : (
+        <>
+          <Route path="/preferences" element={<Preferences user={user} />} />
+          <Route path="/dashboard" element={<Dashboard user={user} />} />
+          <Route path="/book/:bookId" element={<BookDetails />} />
+        </>
+      )}
+    </Routes>
   );
 }
 

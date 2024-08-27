@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+#homeHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vmin;
+}
+
+#homeHero {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.356),
+      rgba(0, 0, 0, 0.356) 70%,
+      transparent
+    ),
+    url("../Assets/home-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#transparent-section {
+  min-height: 50vh;
+  background: linear-gradient(to bottom, transparent, white, white);
+  position: relative;
+  top: -190px;
+}
+#main1,
+#main2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 3vmin;
+  overflow-x: scroll;
+  position: relative;
+  top: -300px;
+  white-space: nowrap;
+  padding: 1vmin;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* For WebKit browsers (Chrome, Safari, etc.) */
+#main1::-webkit-scrollbar,
+#main2::-webkit-scrollbar {
+  display: none;
+}
+
+.brown-tabs {
+  background-color: #a57b4b;
+  width: 25vmin;
+  height: 5vmin;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#others {
+  position: relative;
+  top: -250px;
+  padding: 2vmin;
+}
+
+#others h2 {
+  font-family: "Italianno", cursive;
+  font-size: 5vmin;
+  font-weight: bold;
+  margin-bottom: 2vmin;
+}
+.latest-books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.book-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+}
+
+.book-details {
+  padding: 1rem;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.book-author,
+.book-publish-date {
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0;
+}

@@ -1,0 +1,93 @@
+/* preferences.css */
+#prefCont {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #e0d8c3,
+    #c9b89c
+  ); /* Elegant gradient background */
+}
+
+.preferences-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff; /* Clean white background for the container */
+  border-radius: 12px; /* Slightly more rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Georgia", serif; /* Classic serif font for an old money look */
+  border: 1px solid #ddd; /* Light border to define the container */
+  max-height: 70vh;
+  overflow-y: scroll;
+  scrollbar-color: transparent transparent;
+}
+
+.preferences-header {
+  text-align: center;
+  color: #333; /* Dark color for text */
+  font-size: 2.4rem; /* Slightly larger font size for the header */
+  margin-bottom: 1.5rem;
+  font-weight: bold; /* Bold header for emphasis */
+}
+
+.genre-list {
+  display: flex;
+  gap: 1.2rem;
+  max-height: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #444; /* Slightly lighter color for text */
+  padding: 0.5rem; /* Padding around items for a better layout */
+  border-radius: 8px; /* Rounded corners for items */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.genre-item:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  color: #000; /* Darker text on hover */
+}
+
+.genre-item input {
+  margin-right: 12px; /* Increased margin for better spacing */
+}
+
+.save-button {
+  display: block;
+  width: 100%;
+  padding: 12px 24px; /* Increased padding for a larger button */
+  margin-top: 2rem; /* Increased margin for better spacing */
+  background-color: #3e2a1f; /* Dark color for a luxurious feel */
+  color: #fff;
+  border: none;
+  border-radius: 6px; /* Rounded corners for the button */
+  font-size: 1.2rem; /* Slightly larger font size for the button */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+}
+
+.save-button:hover {
+  background-color: #4a3b2d; /* Slightly lighter color on hover */
+  transform: scale(1.02); /* Slightly increase size on hover */
+}
+
+.save-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.3); /* Focus ring for accessibility */
+}
+
+.error-message {
+  color: #d32f2f; /* Red color for error messages */
+  font-weight: bold;
+  margin-top: 15px; /* Increased margin for better spacing */
+}
